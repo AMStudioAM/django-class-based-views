@@ -7,3 +7,6 @@ class Post(models.Model):
     content = models.TextField(max_length=1000) 
     created_at = models.DateTimeField(default=timezone.now)
     image = models.ImageField(upload_to='post/img') 
+
+    def __str__(self): 
+        return self.title 
